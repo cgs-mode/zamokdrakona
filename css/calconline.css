@@ -1,0 +1,171 @@
+.calcpanel{
+
+    border-left: 1px dashed;
+
+    width: 180px;
+    height: 100px;
+    right: 0px;
+    position: absolute;
+    display: none;
+}
+
+#btCalcShow{
+    position: absolute;
+    right: 10px;
+    top: 70px;
+}
+
+.itemsMenu{
+    /*border: 1px solid darkred;*/
+    padding: 1px;
+}
+
+.first{
+    text-align: right;
+}
+
+.child {
+    display:inline-block;
+    vertical-align:middle;
+    vertical-align:middle;
+    padding-left: 10px;
+    margin-top: -5px;
+}
+.helper {
+    display:inline-block;
+    vertical-align:middle;
+    height:100%;
+    width:0px;
+}
+
+.countUser, .countPrice{
+    width: 25px !important;
+    padding: 3px !important;
+    text-align: right !important;
+}
+.txtCalc{
+    font-size: 12px;
+}
+
+.hideAdd{
+    display: none;
+    padding-left: 15px;
+}
+.hideAdd span{
+    padding-left: 10px;
+}
+.show{
+    display: inline;
+}
+
+.summa{
+    border-top: 1px dashed;
+    margin: -15px 12px 0px 15px;
+    padding-top: 14px;
+}
+.summa span{
+    font-size: 18px;
+}
+
+.spacer{
+    height: 128px;
+}
+
+#btPrint, #btToMail{
+    width: 155px;
+    margin-top: 5px;
+}
+
+.bottomButtons{
+    padding-top: 18px;
+}
+
+#printDiv{
+    position: absolute;
+    width: 750px;
+    background: #ffffff;
+    z-index: 1000;
+    padding: 12px;
+    /*display: none;*/
+}
+#printDiv div{
+    font-size: 12px;
+    padding: 5px;
+}
+#printDiv div:nth-child(2){
+    border-bottom: 1px dashed;
+}
+#printDiv span{
+    display: inline-block;
+}
+#printDiv span:nth-child(1){
+    width: 25px;
+    vertical-align: top;
+    text-align: center;
+}
+#printDiv span:nth-child(2){
+    width: 395px;
+}
+#printDiv span:nth-child(3){
+     width: 75px;
+    text-align: center;
+}
+#printDiv span:nth-child(4){
+    width: 95px;
+    text-align: center;
+}
+#printDiv span:nth-child(5){
+    width: 85px;
+    text-align: center;
+}
+#printDiv span:nth-child(6){
+    width: 60px;
+    text-align: center;
+}
+#printDiv .titlePrint{
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+#printDiv .summaPrint{
+    font-size: 20px;
+    text-align: right;
+    border-top: 1px dashed;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#tomailForm{
+    position: fixed;
+    background: none repeat scroll 0% 0% #F5DEB3;
+    z-index: 1000;
+    left: 38%;
+    top: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    width: 370px;
+}
+#tomailForm input[type="text"],textarea{
+    width: 96%;
+}
+#tomailForm input[type="email"]{
+    width: 100%;
+}
+#tomailForm div{
+    margin: 5px;
+}
+#tomailForm .bottom{
+    text-align: center;
+    padding-top: 10px;
+}
+#tomailForm .tomailError{
+    color: #ff0000;
+    text-align: center;
+}
+#tomailForm .error{
+    border: 1px solid #ff0000;
+}
+#hall{
+    width: 50px;
+}
