@@ -122,9 +122,9 @@ function itemsMenu(){
                 var checked = '<input type="checkbox" class="checkItem" value="1">';
                 var hideAdd = '<span class="hideAdd">' +
                     '<span><input class="countPrice" type="text" value="'+countUser+'" maxlength="3">' +
-                    '<input hidden="hidden" value="'+priceItemsCount+'" >' +
-                    '<input hidden="hidden" value="'+nameItems+'" >' +
-                    '<input hidden="hidden" value="'+weightItems+'" >' +
+                    '<input type="hidden" hidden="hidden" value="'+priceItemsCount+'" >' +
+                    '<input type="hidden" hidden="hidden" value="'+nameItems+'" >' +
+                    '<input type="hidden" hidden="hidden" value="'+weightItems+'" >' +
                     '</span>' +
                     '<span>' + img_tipsText + '</span>' +
                     '<span>'+priceItemsCount+'</span>' +
