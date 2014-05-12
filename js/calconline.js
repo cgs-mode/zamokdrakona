@@ -5,6 +5,7 @@
 var countUser = 1; // кол-во человек
 var halls = 3; // кол-во залов
 
+var menuItemName = "";
 var glWidth = 0;
 var glFlagItemsLoad = false;
 var objZakaz = {
@@ -29,6 +30,7 @@ function initCalc(){
     $(".menudetskoe").parent().after('<div class="calcpanel"></div>');
     $('.calcpanel').css('height',$(".primary_content_wrap").height()-40);
     $(".hystory").after('<input id="btCalcShow" type="reset" value="Расчитать онлайн"/><span style="clear:both"></span>');
+    menuItemName = $(".hystory").text();
 }
 
 function showPanel(){
@@ -196,7 +198,7 @@ function changePrice(){
 function printZakaz(){
     $('#printDiv').remove();
     $('body').prepend('<div id="printDiv"></div>');
-    $('#printDiv').append('<div class="titlePrint">Заказ</div>');
+    $('#printDiv').append('<div class="titlePrint">Заказ (' + menuItemName + ')</div>');
     $('#printDiv').append('<div>Количество человек: ' + $('.countUser').val() + '</div>');
     $('#printDiv').append('<div>' +
         '<span>№</span>' +
@@ -282,6 +284,7 @@ function tomailZakaz(){
             type: "POST",
             url: "tomail.php",
             data: {
+                menuItemName: menuItemName,
                 countUser: $('.countUser').val(),
                 datatime: $('#datatime').val(),
                 hall: $('#hall').val(),

@@ -17,6 +17,7 @@ $countUser = $_POST['countUser'];
 $datatime = $_POST['datatime'];
 $hall = $_POST['hall'];
 $phone = $_POST['phone'];
+$menuItemName = $_POST['menuItemName'];
 
 $summa = $objZakaz->summa;
 
@@ -35,7 +36,7 @@ foreach( $objZakaz->items as $item ){
     $i++;
 }
 
-$message = "Заказ.\r\n<br /><br />";
+$message = "Заказ (".$menuItemName.").\r\n<br /><br />";
 $message .= "Количество человек: ".$countUser."\r\n<br /><br />";
 $message .= $itemOut;
 $message .= "<br />Итого: $summa руб.\r\n<br /><br />";
