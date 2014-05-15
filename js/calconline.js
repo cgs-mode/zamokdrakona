@@ -97,6 +97,7 @@ function itemsMenu(){
         var img_tipsText = '';
         var objTD = $(this).find("td:eq(3)");
         var tipsText = $(objTD).attr('descritpion');
+        var numberPrice = $(objTD).attr('numberPrice');
         var nameItems = $(this).find("td:eq(1)").text();
         var weightItems = $(this).find("td:eq(2)").text();
         if (!tipsText) tipsText = "";
@@ -121,9 +122,16 @@ function itemsMenu(){
                     img_tipsText = '';
                 }
 
+                if (numberPrice != undefined)
+                {
+                    numberPrice = numberPrice*1;
+                }else{
+                    numberPrice = countUser;
+                }
+
                 var checked = '<input type="checkbox" class="checkItem" value="1">';
                 var hideAdd = '<span class="hideAdd">' +
-                    '<span><input class="countPrice" type="text" value="'+countUser+'" maxlength="3">' +
+                    '<span><input class="countPrice" type="text" value="'+numberPrice+'" maxlength="3">' +
                     '<input type="hidden" hidden="hidden" value="'+priceItemsCount+'" >' +
                     '<input type="hidden" hidden="hidden" value="'+nameItems+'" >' +
                     '<input type="hidden" hidden="hidden" value="'+weightItems+'" >' +
