@@ -28,9 +28,9 @@ function initCalc(){
     glWidth = parseInt( $(".grid_13").css('width') );
 
     $(".menudetskoe").parent().after('<div class="calcpanel"></div>');
-    $('.calcpanel').css('height',$(".primary_content_wrap").height()-40);
+    $('.calcpanel').css('height',$(".primary_content_wrap").height()-160);
     $(".hystory").after('<input id="btCalcShow" type="reset" value="Расчитать онлайн"/><span style="clear:both"></span>');
-    menuItemName = $(".hystory").text();
+	menuItemName = $(".hystory").text();
 }
 
 function showPanel(){
@@ -97,7 +97,7 @@ function itemsMenu(){
         var img_tipsText = '';
         var objTD = $(this).find("td:eq(3)");
         var tipsText = $(objTD).attr('descritpion');
-        var numberPrice = $(objTD).attr('numberPrice');
+		var numberPrice = $(objTD).attr('numberPrice');
         var nameItems = $(this).find("td:eq(1)").text();
         var weightItems = $(this).find("td:eq(2)").text();
         if (!tipsText) tipsText = "";
@@ -117,18 +117,18 @@ function itemsMenu(){
                 var priceItemsCount = price * countUser;
 
                 if (tipsText != '') {
-                    img_tipsText = '<img class="tips" title="'+tipsText+'" src="css/2.gif" >';
+                    img_tipsText = '<img class="tips" title="'+tipsText+'" src="/wp-content/themes/theme1949/css/2.gif" >';
                 }else{
                     img_tipsText = '';
                 }
-
+				
                 if (numberPrice != undefined)
                 {
-                    numberPrice = numberPrice*1;
-                }else{
-                    numberPrice = countUser;
+                   numberPrice = numberPrice*1;
+              }else{
+                   numberPrice = countUser;
                 }
-
+			  
                 var checked = '<input type="checkbox" class="checkItem" value="1">';
                 var hideAdd = '<span class="hideAdd">' +
                     '<span><input class="countPrice" type="text" value="'+numberPrice+'" maxlength="3">' +
@@ -251,7 +251,7 @@ function tomailZakaz(){
         '<div><input id="datatime" type="text" max="150" value=""></div>' +
         '</div>' +
         '<div>' +
-        '<div>Зал:</div>' +
+        '<div>Зал: 1-Большой, 2-VIP, 3-Все кафе</div>' +
         '<div>' + htmlHall + '</div>' +
         '</div>' +
         '<div>' +
@@ -290,9 +290,9 @@ function tomailZakaz(){
 
         $.ajax({
             type: "POST",
-            url: "tomail.php",
+            url: "/wp-content/themes/theme1949/tomail.php",
             data: {
-                menuItemName: menuItemName,
+				menuItemName: menuItemName,
                 countUser: $('.countUser').val(),
                 datatime: $('#datatime').val(),
                 hall: $('#hall').val(),
