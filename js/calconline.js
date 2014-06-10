@@ -44,8 +44,9 @@ function showPanel(){
                 glFlagItemsLoad = true;
 
                 $('.countPrice').bind('keypress', function(e){
+                    console.log(e.charCode);
                     if (e.keyCode == 0){
-                        if (e.charCode < 48 || e.charCode > 57) return false;
+                        if (e.charCode < 46 || e.charCode > 57) return false;
                     };
                     setTimeout(function() { changePrice() }, 100)
                 });
@@ -131,7 +132,7 @@ function itemsMenu(){
 
                 var checked = '<input type="checkbox" class="checkItem" value="1">';
                 var hideAdd = '<span class="hideAdd">' +
-                    '<span><input class="countPrice" type="text" value="'+numberPrice+'" maxlength="3">' +
+                    '<span><input class="countPrice" type="text" value="'+numberPrice+'" maxlength="5">' +
                     '<input type="hidden" hidden="hidden" value="'+priceItemsCount+'" >' +
                     '<input type="hidden" hidden="hidden" value="'+nameItems+'" >' +
                     '<input type="hidden" hidden="hidden" value="'+weightItems+'" >' +
